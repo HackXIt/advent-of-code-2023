@@ -3,7 +3,7 @@
 // Created on: Monday, 2023-12-04 @ 21:01:06
 // Author: HackXIt (<hackxit@gmail.com>)
 // -----
-// Last Modified: Monday, 2023-12-04 @ 23:50:04
+// Last Modified: Monday, 2023-12-04 @ 23:52:36
 // Modified By:  HackXIt (<hackxit@gmail.com>) @ HACKXIT
 // -----
 //
@@ -14,6 +14,8 @@ const expect = std.testing.expect;
 fn sumOfLine(line: []const u8) !u32 {
     var line_sum: u32 = 0;
     for (line) |val| {
+        // TODO find leftmost and rightmost digit for sum
+        // TODO create function for finding digit
         if (std.ascii.isDigit(val)) {
             // try std.debug.print("{d}", .{val});
             line_sum += @intCast(val);
